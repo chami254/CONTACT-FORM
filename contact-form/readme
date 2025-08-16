@@ -1,0 +1,93 @@
+Contact Form Backend with Node.js & Nodemailer
+
+
+
+
+
+
+A simple and reusable contact form backend built with Node.js, Express, Nodemailer, and dotenv. This project allows you to handle contact form submissions from static sites and send them directly to your email.
+
+Features
+
+Easy-to-use backend for multiple static websites.
+
+Sends emails securely using Gmail and Nodemailer.
+
+Uses environment variables to protect sensitive information.
+
+Modern, responsive contact form frontend.
+
+Displays success and error messages dynamically.
+
+Ready to deploy locally or to platforms like Heroku.
+
+Demo / Screenshots
+
+Add your screenshots here to showcase the form. For example:
+
+Or link to a live demo if hosted online.
+
+Installation
+
+Clone the repository
+
+git clone https://github.com/your-username/contact-form.git
+cd contact-form
+
+
+Install dependencies
+
+npm install
+
+
+Create a .env file in the project root:
+
+EMAIL_USER=your_email@gmail.com
+EMAIL_PASS=your_gmail_app_password
+PORT=5000
+
+
+Make sure you generate a Gmail App Password if you have 2FA enabled.
+
+Start the server
+
+node server.js
+
+
+The server will run at http://localhost:5000. Your static form should post to /send.
+
+Usage
+
+Place your static site in the public/ folder.
+
+Customize the HTML form to fit your website’s design.
+
+Ensure the form posts to /send with the following fields:
+
+name (string)
+
+email (string)
+
+message (string)
+
+Test sending messages—emails will arrive at the address you set in mailOptions.to.
+
+Project Structure
+contact-form/
+├─ public/           # Static frontend files (HTML, CSS, JS)
+├─ server.js         # Express server & Nodemailer logic
+├─ package.json
+├─ .env              # Environment variables (not committed)
+└─ README.md
+
+Security & Notes
+
+Do not commit your .env file—keep credentials private.
+
+For Gmail, use an App Password instead of your normal password.
+
+This backend can be reused for multiple static sites—just customize the frontend form.
+
+License
+
+MIT License © AthmanIbrahimLethome
